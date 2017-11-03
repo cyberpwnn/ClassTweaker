@@ -78,12 +78,12 @@ public class SimpleTransformer12R1 implements IClassTransformer
 	@Override
 	public byte[] transform(String className, byte[] bytes)
 	{
-    // If your transformer has multiple classes defined, or groups,
-    // It is wise to check what class you are transforming
+    		// If your transformer has multiple classes defined, or groups,
+   		// It is wise to check what class you are transforming
 		if(className.equals("net.minecraft.server.v1_12_R1.EntityPig"))
 		{
-      // In this example, we are simply modifying one of the pigs goals
-      // to "tempt" pigs due to diamonds being held instead of carrots on a stick
+      			// In this example, we are simply modifying one of the pigs goals
+      			// to "tempt" pigs due to diamonds being held instead of carrots on a stick
 			String itemsClass = "net/minecraft/server/v1_12_R1/Items";
 			String itemsDesc = "Lnet/minecraft/server/v1_12_R1/Item;";
 			String itemsName = "CARROT_ON_A_STICK";
@@ -105,7 +105,9 @@ public class SimpleTransformer12R1 implements IClassTransformer
 						{
 							FieldInsnNode finsnNode = (FieldInsnNode) j;
 
-							if(finsnNode.owner.equals(itemsClass) && finsnNode.name.equals(itemsName) && finsnNode.desc.equals(itemsDesc))
+							if(finsnNode.owner.equals(itemsClass) 
+							&& finsnNode.name.equals(itemsName) 
+							&& finsnNode.desc.equals(itemsDesc))
 							{
 								finsnNode.name = itemsExtraName;
 								break;
@@ -115,7 +117,7 @@ public class SimpleTransformer12R1 implements IClassTransformer
 				}
 			}
 
-      // Simple ASM stuff here.
+     			// Simple ASM stuff here.
 			ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
 			node.accept(cw);
 
