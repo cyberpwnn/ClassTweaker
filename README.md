@@ -8,8 +8,8 @@ To use asm, you will need to set up a few things, in this example, maven will be
 ``` xml
 <repositories>
     <repository>
-        <id>lwrap</id>
-        <url>https://raw.githubusercontent.com/SpigotASM/Repository/master/</url>
+        <id>central</id>
+        <url>https://raw.githubusercontent.com/cyberpwnn/Central/master/</url>
     </repository>
 </repositories>
 
