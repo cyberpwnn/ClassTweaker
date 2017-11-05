@@ -9,7 +9,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<github.maven.repository>file://C:\Users\cyberpwn\Documents\development\workspace\Repository\repository</github.maven.repository>
+		<github.maven.repository>file://C:\Users\cyberpwn\Documents\development\repository</github.maven.repository>
 	</properties>
 	<build>
 		<plugins>
@@ -80,13 +80,13 @@
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>clat</id>
-			<url>https://raw.githubusercontent.com/SpigotASM/Repository/master/</url>
+			<id>central</id>
+			<url>https://raw.githubusercontent.com/cyberpwnn/Central/master/</url>
 		</repository>
 	</repositories>
 	<distributionManagement>
 		<repository>
-			<id>clat</id>
+			<id>central</id>
 			<url>${github.maven.repository}</url>
 		</repository>
 	</distributionManagement>
