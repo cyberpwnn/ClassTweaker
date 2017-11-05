@@ -8,8 +8,8 @@ To use asm, you will need to set up a few things, in this example, maven will be
 ``` xml
 <repositories>
     <repository>
-        <id>lwrap</id>
-        <url>https://raw.githubusercontent.com/SpigotASM/Repository/master/</url>
+        <id>central</id>
+        <url>https://raw.githubusercontent.com/cyberpwnn/Central/master/</url>
     </repository>
 </repositories>
 
@@ -48,6 +48,40 @@ The asm.json file goes right with your plugin.yml (resource). **Be sure to add t
   }
 }
 ```
+
+You can also define multiple versions, for example if you know all class versions will work the same
+
+```
+{
+  "transformers": [
+    {
+      "versions": [
+        "v1_12_R1",
+        "v1_11_R1",
+        "v1_10_R1",
+        "v1_9_R2",
+        "v1_9_R1"
+      ],
+      "class": "com.example.transformers.PigTemptationTransformer",
+      "includes": [
+        "pigs"
+      ]
+    },
+  ],
+  "groups": {
+    "pigs": {
+      "classes": [
+        "net.minecraft.server.v1_12_R1.EntityPig",
+        "net.minecraft.server.v1_11_R1.EntityPig",
+        "net.minecraft.server.v1_10_R1.EntityPig",
+        "net.minecraft.server.v1_9_R2.EntityPig",
+        "net.minecraft.server.v1_9_R1.EntityPig"
+      ]
+    }
+  }
+}
+```
+
 ##### Transformers 
 1. Define transformers. A transformer transforms classes that are fed to it by the launch wrapper
 2. Each transformer needs a version. This version is the package version, not the game version
