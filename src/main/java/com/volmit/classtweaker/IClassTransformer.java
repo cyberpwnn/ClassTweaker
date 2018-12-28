@@ -1,4 +1,4 @@
-package org.cyberpwn.classtweaker;
+package com.volmit.classtweaker;
 
 public interface IClassTransformer
 {

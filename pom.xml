@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.cyberpwn</groupId>
 	<artifactId>ClassTweaker</artifactId>
-	<version>1.0</version>
+	<version>1.2</version>
 	<name>ClassTweaker</name>
 	<description>Used in plugins to tweak/modify server and other plugin classes</description>
 	<properties>
@@ -80,14 +80,14 @@
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>central</id>
-			<url>https://raw.githubusercontent.com/cyberpwnn/Central/master/</url>
+			<id>volmit</id>
+			<url>http://nexus.volmit.com/content/repositories/volmit</url>
 		</repository>
 	</repositories>
 	<distributionManagement>
 		<repository>
-			<id>central</id>
-			<url>${github.maven.repository}</url>
+			<id>volmit</id>
+			<url>http://nexus.volmit.com/content/repositories/volmit</url>
 		</repository>
 	</distributionManagement>
 </project>
