@@ -8,8 +8,8 @@ To use asm, you will need to set up a few things, in this example, maven will be
 ``` xml
 <repositories>
     <repository>
-        <id>central</id>
-        <url>https://raw.githubusercontent.com/VolmitSoftware/ClassTweaker/master/</url>
+        <id>volmit</id>
+        <url>http://nexus.volmit.com/content/repositories/volmit</url>
     </repository>
 </repositories>
 
@@ -17,7 +17,7 @@ To use asm, you will need to set up a few things, in this example, maven will be
     <dependency>
         <groupId>org.cyberpwn</groupId>
         <artifactId>ClassTweaker</artifactId>
-        <version>1.0</version>
+        <version>1.2</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
